@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #050b14;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Dynamic sky glow */
+.background {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at top, #1e90ff33, transparent 60%),
+        linear-gradient(180deg, #0b1c2d, #050b14);
+    z-index: -1;
+}
+
+/* APP CONTAINER */
+.weather-app {
+    width: 380px;
+    min-height: 720px;
+    padding: 24px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.city {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.date {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.search {
+    display: flex;
+    gap: 6px;
+}
+
+.city-input {
+    width: 120px;
+    padding: 8px;
+    border-radius: 12px;
+    border: none;
+}
+
+.search-btn {
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: none;
+    background: #1e90ff;
+    color: white;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+}
+
+.temp {
+    font-size: 88px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.feels {
+    opacity: 0.75;
+}
+
+/* SUN PATH */
+.sun {
+    background: rgba(255,255,255,0.12);
+    padding: 16px;
+    border-radius: 20px;
+}
+
+.sun-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+.sun-bar {
+    height: 6px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 6px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.sun-progress {
+    height: 100%;
+    width: 50%; /* JS controls this */
+    background: linear-gradient(90deg, #ffd700, #ff8c00);
+}
+
+/* STATS */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.stat {
+    background: rgba(255,255,255,0.12);
+    padding: 14px;
+    border-radius: 16px;
+}
+
+.stat p {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.stat h3 {
+    margin-top: 6px;
+    font-size: 18px;
+}
