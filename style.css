@@ -116,8 +116,9 @@ body {
 
 .sun-progress {
     height: 100%;
-    width: 50%; /* JS controls this */
+    width: 0; /* JS controls this */
     background: linear-gradient(90deg, #ffd700, #ff8c00);
+    transition: all 2s ease;
 }
 
 /* STATS */
@@ -141,4 +142,11 @@ body {
 .stat h3 {
     margin-top: 6px;
     font-size: 18px;
+}
+
+@media(width < 600px){
+    .weather-app{
+        width: 100%;
+        border-radius: 0;
+    }
 }
