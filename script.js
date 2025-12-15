@@ -19,6 +19,8 @@ async function getWeather(city) {
             document.querySelector('.city').innerHTML = data.name;
             document.querySelector('.date').innerHTML = today_date.toLocaleDateString() + ' • Clear sky'
             document.querySelector('.temp-value').innerHTML = Math.floor(data.main.temp) + '°' ;
+            document.querySelector('.temp').style.fontSize = '88px'
+            document.querySelector('.temp').style.fontWeight = '800'
             document.querySelector('.feels').innerHTML = 'Feels like - ' + data.main.feels_like + '°'
             let sunrise = new Date((data.sys.sunrise) * 1000)
             let sunset = new Date((data.sys.sunset) * 1000)
